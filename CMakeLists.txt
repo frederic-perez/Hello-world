@@ -4,11 +4,11 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 PROJECT(Hello-world)
 
-SET(SRC_LIST
+set(SRC_LIST
 	main.cpp
 )
 
-ADD_EXECUTABLE(${PROJECT_NAME} ${SRC_LIST})
+add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 message(STATUS "CMAKE_C_PLATFORM_ID is ${CMAKE_C_PLATFORM_ID}")
 message(STATUS "CMAKE_SYSTEM_NAME is ${CMAKE_SYSTEM_NAME}")
@@ -16,7 +16,7 @@ message(STATUS "CMAKE_SYSTEM_NAME is ${CMAKE_SYSTEM_NAME}")
 if("${CMAKE_SYSTEM_NAME}" MATCHES "Windows")
 	if(MSVC)
 		message(STATUS "Entering Windows/MSVC branch.")
-		SET(CMAKE_CXX_FLAGS
+		set(CMAKE_CXX_FLAGS
 			"${CMAKE_CXX_FLAGS} -D_SCL_SECURE_NO_WARNINGS /W4 /WX /EHa /wd4351")
 		# '- http://msdn.microsoft.com/en-US/library/thxezb7y.aspx:
 		#		  /wd n  Disables the compiler warning that is specified in n.
@@ -47,8 +47,8 @@ message(STATUS "CMAKE_CXX_FLAGS are:" ${CMAKE_CXX_FLAGS})
 # Link the executable to the required libraries
 
 TARGET_LINK_LIBRARIES(${PROJECT_NAME}
-	)
-#	${Boost_LIBRARIES})
-#	${Boost_LIBRARIES} ${OpenIGTLink_LIBRARIES})
+#	${Boost_LIBRARIES}
+#	${Boost_LIBRARIES} ${OpenIGTLink_LIBRARIES}
+)
 
 # -- eof
