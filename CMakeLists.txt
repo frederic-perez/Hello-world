@@ -1,8 +1,8 @@
 # -- CMake build rules
 
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8)
 
-PROJECT(Hello-world)
+project(Hello-world)
 
 set(SRC_LIST
 	main.cpp
@@ -46,7 +46,7 @@ message(STATUS "CMAKE_CXX_FLAGS are:" ${CMAKE_CXX_FLAGS})
 
 # Link the executable to the required libraries
 
-TARGET_LINK_LIBRARIES(${PROJECT_NAME}
+target_link_libraries(${PROJECT_NAME}
 #	${Boost_LIBRARIES}
 #	${Boost_LIBRARIES} ${OpenIGTLink_LIBRARIES}
 )
