@@ -6,7 +6,7 @@ Hello-world
   <img src="https://dl.dropboxusercontent.com/u/1068081/Shared-images/Hello-world--A-geek-is-born-Ge10.jpg?raw=true" alt="A geek is born"/>
 </p>
 
-The simple "Hello, world!" program to develop a CMakeLists.txt for various platforms and compilers.
+The simple "Hello, world!" C++ program to develop a CMakeLists.txt for various platforms and compilers.
 So far we have tested it using
 - Windows 8.1: vs12 (Visual Studio 2013)
 - Ubuntu: g++ 4.8.2, clang++ 3.4.1
