@@ -2,7 +2,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-project(Hello-world)
+project(Hello-world) # TODO: Split as on ABcb
 
 set(SRC_LIST
 	main.cpp
