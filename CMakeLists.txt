@@ -2,7 +2,9 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-project(Hello-world) # TODO: Split as on ABcb
+set(PROJECT_NAME "Hello-world")
+set(PROJECT_TYPE "CXX")
+project(${PROJECT_NAME} ${PROJECT_TYPE})
 
 set(SRC_LIST
 	main.cpp
