@@ -3,7 +3,7 @@ Hello-world
 
 <p align="center">
   <img src="https://dl.dropboxusercontent.com/u/1068081/Shared-images/Hello-world--240x163.png?raw=true" alt="Original Hello world program in C"/>
-  <img src="https://dl.dropboxusercontent.com/u/1068081/Shared-images/Hello-world--A-geek-is-born-Ge10.jpg?raw=true" alt="A geek is born"/>
+  <img src="https://www.dropbox.com/s/yzukcqjkkfaltwk/Hello-world--A-geek-is-born-Ge10.jpg?dl=0?raw=true" alt="A geek is born"/>
 </p>
 
 The simple "Hello, world!" C++ program to develop a CMakeLists.txt for various platforms and compilers.
