@@ -2,7 +2,7 @@ Hello-world
 ===========
 
 <p align="center">
-  <img src="https://dl.dropboxusercontent.com/u/1068081/Shared-images/Hello-world--240x163.png?raw=true" alt="Original Hello world program in C"/>
+  <img src="https://www.dropbox.com/s/7gm2fzkteg7oqrq/Hello-world--240x163.png?raw=true" alt="Original Hello world program in C"/>
   <img src="https://www.dropbox.com/s/yzukcqjkkfaltwk/Hello-world--A-geek-is-born-Ge10.jpg?raw=true" alt="A geek is born"/>
 </p>
 
