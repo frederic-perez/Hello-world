@@ -15,12 +15,29 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 message(STATUS "CMAKE_C_PLATFORM_ID is ${CMAKE_C_PLATFORM_ID}")
 message(STATUS "CMAKE_SYSTEM_NAME is ${CMAKE_SYSTEM_NAME}")
 
+message(STATUS "CMAKE_GENERATOR is ${CMAKE_GENERATOR}")
+message(STATUS "CMAKE_GENERATOR_TOOLSET is ${CMAKE_GENERATOR_TOOLSET}")
+
 if("${CMAKE_SYSTEM_NAME}" MATCHES "Windows")
 	if(MSVC)
 		message(STATUS "Entering Windows/MSVC branch.")
-		string(CONCAT CMAKE_CXX_FLAGS
-			"${CMAKE_CXX_FLAGS} -D_SCL_SECURE_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS "
-			"/W4 /WX /EHa /wd4351")
+		if("${CMAKE_GENERATOR_TOOLSET}" MATCHES "LLVM-vs2014")
+			message(STATUS "Entering LLVM-vs2014 branch.")
+			string(CONCAT CMAKE_CXX_FLAGS
+				"-std=c++11 "
+				"-Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align "
+				"-Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion "
+				"-Wnull-dereference "
+				"-Wformat=2 "
+				# "-Wmisleading-indentation -Wduplicated-cond -Wduplicated-branches "
+				# "-Wlogical-op -Wuseless-cast "
+				"-Wdouble-promotion ")
+		else()
+			message(STATUS "Entering __not__ LLVM-vs2014 branch.")
+			string(CONCAT CMAKE_CXX_FLAGS
+				"-D_SCL_SECURE_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS "
+				"/W4 /WX /EHa /wd4351")
+		endif()
 		# '- http://msdn.microsoft.com/en-US/library/thxezb7y.aspx:
 		#		  /wd n  Disables the compiler warning that is specified in n.
 		#			For example, /wd4326 disables compiler warning C4351.
