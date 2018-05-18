@@ -8,6 +8,12 @@ Hello-world
 
 The simple "Hello, world!" C++ program to develop a CMakeLists.txt for various platforms and compilers.
 So far we have tested it using
-- Windows 10: vs14 (Visual Studio 2015), both native and with toolset LLVM-vs2014; MinGW with g++ 5.3.0
-- Linux Ubuntu 16.04: g++ 5.4.0, clang++ 3.8.0
+- Linux Ubuntu 16.04:
+  - clang++ 3.8.0
+  - g++ 5.4.0
+- Windows 10:
+  - MinGW with g++ 5.3.0
+  - vs14 (Visual Studio 2015)
+    - with the default toolset 
+    - with toolset LLVM-vs2014
 - ~~Apple OS X: LLVM~~ (discontinued)
