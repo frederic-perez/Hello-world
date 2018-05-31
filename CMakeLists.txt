@@ -1,18 +1,16 @@
-# -- CMake build rules
-
 cmake_minimum_required(VERSION 2.8)
 
 set(PROJECT_NAME "Hello-world")
 set(PROJECT_TYPE "CXX")
 project(${PROJECT_NAME} ${PROJECT_TYPE})
 
+set(CMAKE_VERBOSE_MAKEFILE TRUE)
+
 set(SRC_LIST
   main.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
-
-set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
 message(STATUS "CMAKE_C_PLATFORM_ID is ${CMAKE_C_PLATFORM_ID}")
 message(STATUS "CMAKE_SYSTEM_NAME is ${CMAKE_SYSTEM_NAME}")
@@ -105,5 +103,3 @@ target_link_libraries(${PROJECT_NAME}
 # ${Boost_LIBRARIES}
 # ${Boost_LIBRARIES} ${OpenIGTLink_LIBRARIES}
 )
-
-# -- eof
