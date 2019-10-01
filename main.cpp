@@ -1,7 +1,8 @@
 #include <iostream>
 
-int
+auto
 main()
+-> int
 {
   std::cout << "Hello, world!" << std::endl;
   return EXIT_SUCCESS;
