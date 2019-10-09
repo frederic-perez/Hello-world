@@ -1,5 +1,4 @@
-Hello-world
-===========
+# Hello-world
 
 <p align="center">
   <img src="images/Hello-world--240x163.png?raw=true" alt="Original Hello world program in C"/>
